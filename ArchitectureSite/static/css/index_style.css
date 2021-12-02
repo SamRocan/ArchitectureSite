@@ -1,108 +1,17 @@
-html,body {
-    height:100vh;
-    margin: 0;
-    padding: 0;
-    background-color: black;
+.carousel{
+    position:absolute;
+    top:0;
+    left:0;
 }
-/*Transition in */
-body {
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s; /* Firefox < 16 */
-    -ms-animation: fadein 2s; /* Internet Explorer */
-    -o-animation: fadein 2s; /* Opera < 12.1 */
-    animation: fadein 2s;
-}
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-/*end transition */
-nav {
-    max-width: 100%;
-    position: -webkit-sticky;
-    position: sticky;
-    margin: 0px auto;
-    z-index: 9;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, .3);
-
-}
-
-.navbar-brand {
-    width: 7%;
-}
-.navbar-brand img {
-    float: left;
-    max-width: 120px !important;
-    max-height: 120px !important;
-}
-.nav-link {
-    padding-top: 40px;
-    flex: 1;
-    text-align: right;
-
-}
-.nav-link ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-}
-
-.nav-link a:hover {
-    text-decoration: underline;
-}
-
-.carousel-item {
+.carousel-item{
     height: 100vh;
-    min-height: 300px;
+    position: center;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-#carouselExampleIndicators{
-    position:absolute;
-    width:100%;
-    top:0;
-}
 .carousel-caption {
-    background-color: rgba(0, 0, 0, .3);
-}
-/*---Firefox Bug Fix --*/
-.carousel-item {
-    transition: -webkit-transform 0.5s ease;
-    transition: transform 0.5s ease;
-    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-    -webkit-backface-visibility: visible;
-    backface-visibility: visible;
-}
-.h2 {
-    margin: 60px;
-    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.3);
 }

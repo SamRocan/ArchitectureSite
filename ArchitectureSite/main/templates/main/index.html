@@ -1,5 +1,9 @@
 {% extends 'main/base.html' %}
 {% load static %}
+{% block extraCSS %}
+<link rel="stylesheet" href="{% static 'css/index_style.css' %}">
+{% endblock %}
+
 {% block content %}
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -7,26 +11,23 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
-    <div class="carousel-inner" role="listbox">
-        <!-- Slide One -->
-        <div class="carousel-item active" style="background-image: url('media/images/Trafalgar.png')">
-            <div class="carousel-caption d-md-block">
-                <h3>Trafalgar Road</h3>
-                <p class="par d-none d-md-block">Greenwich - Residential Development</p>
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('{% static 'images/Balham.png' %}')">
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Balham</h2>
+                <h5>Residential Property</h5>
             </div>
         </div>
-        <!-- Slide Two -->
-        <div class="carousel-item" style="background-image: url('media/images/ParkRoyal.png')">
-            <div class="carousel-caption d-md-block">
-                <h3>Park Royal</h3>
-                <p class="par d-none d-md-block">Brent - Mixed Use Development</p>
+        <div class="carousel-item" style="background-image: url('{% static 'images/ParkRoyal.png' %}')">
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Brent</h2>
+                <h5>Mixed Use Property</h5>
             </div>
         </div>
-        <!-- Slide Three -->
-        <div class="carousel-item" style="background-image: url('media/images/Balham.png')">
-            <div class="carousel-caption d-md-block">
-                <h3>Balham High Street</h3>
-                <p class="par d-none d-md-block"> Balham - Residential Development</p>
+        <div class="carousel-item" style="background-image: url('{% static 'images/Trafalgar.png' %}')">
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Trafalgar</h2>
+                <h5>Commercial Property</h5>
             </div>
         </div>
     </div>
