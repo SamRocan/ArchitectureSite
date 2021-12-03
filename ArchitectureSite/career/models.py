@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 class Job(models.Model):
     title = models.CharField(max_length=255)
+    location = models.CharField(max_length=255, default="")
     description = models.TextField(max_length=10000)
     requirements = models.TextField(max_length=10000)
     salary = models.IntegerField(verbose_name="Salary (£)", help_text='Annual')

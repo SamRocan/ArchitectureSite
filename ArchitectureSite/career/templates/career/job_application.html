@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block extraCSS %}
+<link rel="stylesheet" href="{% static 'css/career_index_style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div>
+
+    <p>{{job_role.title}}</p>
+    <p>{{job_role.description}}</p>
+    <p>{{job_role.salary}}</p>
+</div>
+{% endblock %}
+{% block extraJS %}
+{% endblock %}
