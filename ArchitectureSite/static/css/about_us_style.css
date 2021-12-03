@@ -1,0 +1,36 @@
+
+#provided {
+    padding-top: 20px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+}
+#senior {
+    padding-top: 20px;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+}
+p {
+    font-size: 13px;
+}
+h4 {
+    font-weight: 800;
+    font: bold;
+}
+.wrapper {
+    min-height: 100%;
+
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    margin-bottom: -50px;
+}
+/* FOOTER */
+.footer {
+    background: rgba(4, 51, 97, .5);
+    color: white;
+    text-align: center;
+}
+
+.footer a:link {
+    color: white;
+}
+.footer, .pad {
+    height: 50px;
+}
