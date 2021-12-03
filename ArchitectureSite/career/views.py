@@ -11,12 +11,13 @@ def career_index(request):
 
 def job_application(request, jobID):
     job_role = get_object_or_404(Job, id=jobID)
-
+    print(job_role.id)
     if request.method == 'POST':
         form = JobApplicationForm(request.POST, request.FILES)
         if form.is_valid():
-            print(form.cleaned_data['first_name'])
-            form.save()
+            model_instance = form.save(commit=False)
+            model_instance.job = job_role
+            model_instance.save()
             return redirect('index')
     else:
         form = JobApplicationForm()

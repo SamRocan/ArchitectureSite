@@ -1,28 +1,62 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% block extraCSS %}
-<link rel="stylesheet" href="{% static 'css/career_index_style.css' %}">
+<link rel="stylesheet" href="{% static 'css/job_application_style.css' %}">
 {% endblock %}
 
 {% block content %}
 <div>
-    <p>{{job_role.title}}</p>
-    <p>{{job_role.description}}</p>
-    <p>{{job_role.salary}}</p>
-
-<form method="post" enctype="multipart/form-data" style="text-align: center">
+    <div style="text-align: center; border-radius: 3px; background-color: rgba(0,0,0,0.05); width: 80%; margin-left: auto; margin-right: auto; padding: 10px">
+    <h4>Position: {{job_role.title}}</h4>
+    <small>{{job_role.description}}</small>
+    <small>- £{{job_role.salary}} p.a</small>
+    </div>
+<form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {% block form-content %} {% for i in form %}
-    {{i.label}}
-    {{i}}
-    {% endfor %} {% if form.errors %}
-    {% for field in form %} {% for error in field.errors %}
-    {{ error|escape }}
-    {% endfor %} {% endfor %} {% for error in form.non_field_errors %}
-    {{ error|escape }}
-    {% endfor %}s
-    {% endif %} {% endblock %}
+    <div class="application-form">
+        <div>
+        {{form.first_name.label}}
+        </div>
+        <div>
+        {{form.first_name}}
+        </div>
+        <div>
+        {{form.last_name.label}}
+        </div>
+        <div>
+        {{form.last_name}}
+        </div>
+        <div>
+        {{form.email.label}}
+        </div>
+        <div>
+        {{form.email}}
+        </div>
+        <div>
+        {{form.cover_letter.label}}
+        </div>
+        <div class="custom-file">
+            {{form.cover_letter}}
+            <label class="custom-file-label" for="cover-letter">Choose file...</label>
+        </div>
+        <div>
+        {{form.cv.label}}
+        </div>
+        <div class="custom-file">
+            {{form.cv}}
+            <label class="custom-file-label" for="cv">Choose file...</label>
+        </div>
+        <div>
+        {{form.portfolio.label}}
+        </div>
+        <div class="custom-file">
+            {{form.portfolio}}
+            <label class="custom-file-label" for="portfolio">Choose file...</label>
+        </div>
+        <br>
+        <br>
     <button type="submit" class="btn btn-success">Submit Application</button>
+    </div>
 </form>
 </div>
 {% endblock %}
