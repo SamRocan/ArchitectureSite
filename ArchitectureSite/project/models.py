@@ -17,12 +17,17 @@ class Property(models.Model):
     post_code = models.CharField(max_length=10)
     PropertyType = models.ForeignKey(PropertyType, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.name
 
 def get_image_filename(instance, filename):
-    title = instance.post.title
+    title = instance.property.name
     slug = slugify(title)
     return "property_images/%s-%s" % (slug, filename)
 
-class PropertyImages(models.Model):
+class PropertyImage(models.Model):
     property = models.ForeignKey(Property, on_delete=models.CASCADE)
     image = models.ImageField(upload_to=get_image_filename, verbose_name='Image')
+
+    def __str__(self):
+        return self.property.name + " - Image (" + str(self.id) + ")"
