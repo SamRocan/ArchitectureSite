@@ -1,8 +1,20 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% block extraCSS %}
+<link rel="stylesheet" href="{% static 'css/career_index_style.css' %}">
 {% endblock %}
 
 {% block content %}
-<h1>Careers</h1>
+<br>
+    <h4 style="text-align: center">Vacancies</h4>
+    <hr>
+<div class="wrapper">
+    <figure class="gallery__item">
+        <div class="centered">
+            <p>location</p>
+            <h3>Job Title</h3>
+            <button class="btn btn-default">Apply</button>
+        </div>
+    </figure>
+</div>
 {% endblock %}
