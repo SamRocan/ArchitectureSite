@@ -6,10 +6,24 @@
 
 {% block content %}
 <div>
-
     <p>{{job_role.title}}</p>
     <p>{{job_role.description}}</p>
     <p>{{job_role.salary}}</p>
+
+<form method="post" enctype="multipart/form-data" style="text-align: center">
+    {% csrf_token %}
+    {% block form-content %} {% for i in form %}
+    {{i.label}}
+    {{i}}
+    {% endfor %} {% if form.errors %}
+    {% for field in form %} {% for error in field.errors %}
+    {{ error|escape }}
+    {% endfor %} {% endfor %} {% for error in form.non_field_errors %}
+    {{ error|escape }}
+    {% endfor %}s
+    {% endif %} {% endblock %}
+    <button type="submit" class="btn btn-success">Submit Application</button>
+</form>
 </div>
 {% endblock %}
 {% block extraJS %}

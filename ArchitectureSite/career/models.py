@@ -18,7 +18,7 @@ class JobAppilcation(models.Model):
     last_name = models.CharField(max_length=255)
     email = models.EmailField(max_length=255)
     cover_letter_file = models.FileField(verbose_name="Cover Letter (File)", upload_to='cover_letters/', blank=True, null=True)
-    cv = models.FileField(upload_to='cvs/')
+    cv = models.FileField(upload_to='cvs/', blank=True, null=True)
     portfolio = models.FileField(upload_to='portfolios/', blank=True, null=True)
 
 
