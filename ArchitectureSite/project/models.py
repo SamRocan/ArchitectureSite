@@ -15,6 +15,7 @@ class Property(models.Model):
     city = models.CharField(max_length=64)
     country = models.CharField(max_length=255)
     post_code = models.CharField(max_length=10)
+    description = models.TextField(max_length=5000, default="")
     PropertyType = models.ForeignKey(PropertyType, on_delete=models.CASCADE)
 
     def __str__(self):
@@ -26,7 +27,7 @@ def get_image_filename(instance, filename):
     return "property_images/%s-%s" % (slug, filename)
 
 class PropertyImage(models.Model):
-    property = models.ForeignKey(Property, on_delete=models.CASCADE)
+    property = models.ForeignKey(Property, on_delete=models.CASCADE, )
     image = models.ImageField(upload_to=get_image_filename, verbose_name='Image')
 
     def __str__(self):
