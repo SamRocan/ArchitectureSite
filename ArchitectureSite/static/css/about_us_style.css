@@ -12,25 +12,11 @@ p {
 }
 h4 {
     font-weight: 800;
-    font: bold;
 }
 .wrapper {
     min-height: 100%;
 
-    /* Equal to height of footer */
-    /* But also accounting for potential margin-bottom of last child */
-    margin-bottom: -50px;
 }
-/* FOOTER */
-.footer {
-    background: rgba(4, 51, 97, .5);
-    color: white;
-    text-align: center;
-}
-
-.footer a:link {
-    color: white;
-}
-.footer, .pad {
-    height: 50px;
+body{
+    background-color: rgb(235, 233, 233);
 }
