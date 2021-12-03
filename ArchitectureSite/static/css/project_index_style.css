@@ -14,11 +14,17 @@ figure{
     position: relative;
 }
 .centered {
+    opacity: 0;
     position: absolute;
     color: white;
     top: 50%;
     width: 100%;
     text-align: center;
+    transition: 1s;
+}
+.my-class{
+    opacity: 1;
+    transition: 1s;
 }
 .gallery__item{
     margin: 0px;

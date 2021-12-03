@@ -1,15 +1,16 @@
 console.log("Working")
 var x = document.getElementsByClassName("gallery__item");
-var y = document.getElementsByClassName("centered");
 
 $(document).ready(function() {
     $(".gallery__item").each(function() {
         $(this)
             .mouseover(function() {
-                console.log("Over")
+                thechild = this.children[1]
+                thechild.classList.add("my-class")
             })
             .mouseleave(function() {
-                console.log("Not Overs")
+                thechild = this.children[1]
+                thechild.classList.remove("my-class")
             });
     })
 });
