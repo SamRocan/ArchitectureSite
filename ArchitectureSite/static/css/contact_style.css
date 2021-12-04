@@ -1,0 +1,25 @@
+.department-col{
+    border-width: 1px;
+    border-color: rgba(0,0,0, 0.10);
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+}
+.department-info {
+    padding: 30px;
+}
+.department-info p{
+    margin: 5px !important;
+}
+.btn{
+    margin-top: 5px;
+    background-color: rgba(0,0,0, 0.15);
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+    font-size: 14px !important;
+    border-radius:20px !important;
+    color: black;
+}
+.btn:hover{
+    color: black;
+}

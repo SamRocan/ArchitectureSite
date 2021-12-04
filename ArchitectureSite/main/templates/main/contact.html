@@ -1,8 +1,48 @@
 {% extends 'main/base.html' %}
 {% load static %}
 {% block extraCSS %}
+<link rel="stylesheet" href="{% static 'css/contact_style.css' %}">
 {% endblock %}
 
 {% block content %}
-<h1>Contact</h1>
+<div class="container-fluid p-0 m-0">
+    <div class="row contact-departments">
+        <div class="col-lg-3 col-md-6 col-xs-12 department-col">
+            <div class="department-info">
+                <h3>New Work</h3>
+                <p>Name</p>
+                <p>Position</p>
+                <p>+44 207 281 9333</p>
+                <a href="mailto:samclendenan@icloud.com" class="btn btn-default">Email</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-12 department-col">
+            <div class="department-info">
+                <h3>Existing</h3>
+                <p>Name</p>
+                <p>Position</p>
+                <p>+44 207 281 9333</p>
+                <a href="mailto:samclendenan@icloud.com" class="btn btn-default">Email</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-12 department-col">
+            <div class="department-info">
+                <h3>General</h3>
+                <p>Name</p>
+                <p>Position</p>
+                <p>+44 207 281 9333</p>
+                <a href="mailto:samclendenan@icloud.com" class="btn btn-default">Email</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-xs-12 department-col">
+            <div class="department-info">
+                <h3>Careers</h3>
+                <p>Name</p>
+                <p>Position</p>
+                <p>+44 207 281 9333</p>
+                <a href="mailto:samclendenan@icloud.com" class="btn btn-default">Email</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

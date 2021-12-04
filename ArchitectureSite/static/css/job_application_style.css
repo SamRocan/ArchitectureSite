@@ -6,3 +6,6 @@
 .application-form > div{
     margin-top: 10px;
 }
+#portfolio, #cv, #cover-letter{
+    cursor: pointer;
+}
