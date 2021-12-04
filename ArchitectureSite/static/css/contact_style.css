@@ -11,6 +11,16 @@
 .department-info p{
     margin: 5px !important;
 }
+.location{
+    padding: 0 !important;
+    margin: 0 !important;
+    border-width: 1px;
+    border-color: rgba(0,0,0, 0.10);
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+}
+
 .btn{
     margin-top: 5px;
     background-color: rgba(0,0,0, 0.15);
