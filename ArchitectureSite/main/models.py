@@ -11,7 +11,7 @@ class Office(models.Model):
     phone_number = models.CharField(validators=[phone_regex], max_length=17)
     email = models.EmailField(max_length=255)
     google_map_location = models.CharField(max_length=255, help_text="Go to google maps, find the location you desire and copy the 'share' link")
-    display_image = models.ImageField(default='images/office_generic.jpg')
+    display_image = models.ImageField(upload_to="offices/", default='images/office_generic.jpg')
 
     def __str__(self):
         return str(self.city) + " - " + str(self.post_code)

@@ -47,7 +47,20 @@
 </div>
 <div class="container-fluid p-0 m-0">
     <div class="row">
+        {% for office in offices %}
         <div class="col-lg-6 col-md-12 location">
+            <img src="{{office.display_image.url}}">
+            <div class="department-info">
+                <h3>{{office.city}}</h3>
+                <p>{{office.street_address}}, {{office.post_code}}</p>
+                <p>{{office.city}}, {{office.country}}</p>
+                <p>{{office.phone_number}}</p>
+                <a href="mailto:{{office.email}}" class="btn btn-default">Email</a>
+                <a href="{{office.google_map_location}}" class="btn btn-default">Find Us</a>
+            </div>
+        </div>
+        {% endfor %}
+        <!--<div class="col-lg-6 col-md-12 location">
             <img src="{% static 'images/ParkRoyal.png' %}" width="100%">
             <div class="department-info">
                 <h3>London</h3>
@@ -87,7 +100,7 @@
                 <p>+44 207 281 9333</p>
                 <a href="mailto:samclendenan@icloud.com" class="btn btn-default">Email</a>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
 {% endblock %}
