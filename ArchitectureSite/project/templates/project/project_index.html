@@ -8,7 +8,7 @@
     {% for i in propertys %}
         {% for z in i.propertyimage_set.all %}
             {% if forloop.counter == 1%}
-                <figure class="gallery__item">
+                <figure class="gallery__item fade-on-scroll">
                     <a data-toggle="modal" data-target="#project{{i.id}}"><img src="{{z.image.url}}" class="gallery__img" alt="Image 1"></a>
                     <div class="centered"><h4>{{i.name}}</h4></div>
                 </figure>

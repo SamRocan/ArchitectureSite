@@ -18,9 +18,11 @@ h4 {
 
 }
 body{
-    background-color: rgb(235, 233, 233);
+    background-color: rgba(0,0,0, 0.10) !important;
 }
-
+.navbar{
+    background-color: #fff !important;
+}
 .fade-on-scroll{
     opacity: 0;
     transition: opacity 1s;

@@ -42,3 +42,17 @@ figure{
     box-shadow:0 0 16px black;
     cursor: pointer;
 }
+
+.fade-on-scroll{
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+.fade-on-scroll.animate{
+    opacity: 1;
+}
+body{
+    background-color: rgba(0,0,0, 0.10) !important;
+}
+.navbar{
+    background-color: #fff !important;
+}
