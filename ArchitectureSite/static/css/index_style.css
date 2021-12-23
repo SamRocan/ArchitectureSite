@@ -4,7 +4,7 @@
     left:0;
 }
 .carousel-item{
-    height: 100vh;
+    height: calc(93vh);
     position: center;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
