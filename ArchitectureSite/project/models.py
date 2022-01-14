@@ -27,7 +27,7 @@ def get_image_filename(instance, filename):
     return "property_images/%s-%s" % (slug, filename)
 
 class PropertyImage(models.Model):
-    property = models.ForeignKey(Property, on_delete=models.CASCADE, )
+    property = models.ForeignKey(Property, on_delete=models.CASCADE)
     image = models.ImageField(upload_to=get_image_filename, verbose_name='Image')
 
     def __str__(self):
